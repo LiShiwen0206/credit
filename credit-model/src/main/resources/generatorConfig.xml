@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="wanda" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <plugin type="com.starsgroupchina.common.plugin.mybatis.CommentPlugin"></plugin>
+        <plugin type="com.starsgroupchina.common.plugin.mybatis.AddWherePlugin"></plugin>
+        <plugin type="com.starsgroupchina.common.plugin.mybatis.PagerPlugin"></plugin>
+        <plugin type="com.starsgroupchina.common.plugin.mybatis.SerializablePlugin"></plugin>
+        <plugin type="com.starsgroupchina.common.plugin.mybatis.EqualsHashCodePlugin"></plugin>
+        <plugin type="com.starsgroupchina.common.plugin.mybatis.ExamplePlugin"></plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.40.64:3306/hxjk_credit?serverTimezone=UTC"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.starsgroupchina.credit.bean.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+            <property name="rootClass" value="com.starsgroupchina.common.base.BaseModel"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.starsgroupchina.credit.bean.mapper"
+                         targetProject="src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+
+        <table tableName="v_workgroup_permission" domainObjectName="VWorkgroupPermission"
+            enableInsert="true"
+            enableSelectByPrimaryKey="true"
+            enableSelectByExample="true"
+            enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true"
+            enableDeleteByExample="true"
+            enableCountByExample="true"
+            enableUpdateByExample="true"
+            selectByPrimaryKeyQueryId="true"
+            selectByExampleQueryId="true">
+            <generatedKey column="id" sqlStatement="mysql" identity="true"/>
+        </table>
+
+        <!--<table tableName="workgroup" domainObjectName="Workgroup"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="workgroup_permission" domainObjectName="WorkgroupPermission"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="org" domainObjectName="Org"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="role" domainObjectName="Role"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="role_data" domainObjectName="RoleData"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="member" domainObjectName="Member"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="org_file" domainObjectName="OrgFile"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="policy" domainObjectName="Policy"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="policy_field" domainObjectName="PolicyField"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="risk_model" domainObjectName="RiskModel"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="risk_model_group" domainObjectName="RiskModelGroup"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="risk_model_field" domainObjectName="RiskModelField"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="category" domainObjectName="Category"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="product" domainObjectName="Product"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="product_field" domainObjectName="ProductField"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="product_file" domainObjectName="ProductFile"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="blacklist" domainObjectName="Blacklist"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="file_resource" domainObjectName="FileResource"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="product_form" domainObjectName="ProductForm"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+            <!--<columnOverride column="form" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="project" domainObjectName="Project"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="project_record" domainObjectName="ProjectRecord"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="project_relation" domainObjectName="ProjectRelation"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="number_rule" domainObjectName="NumberRule"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="project_form" domainObjectName="ProjectForm"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+            <!--<columnOverride column="project_form" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="third_request_history" domainObjectName="ThirdRequestHistory"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="third_credit_result" domainObjectName="ThirdCreditResult"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+            <!--<columnOverride column="result" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="credit_info" domainObjectName="CreditInfo"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+            <!--<columnOverride column="info_form" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+        <!--</table>-->
+        <!--<table tableName="conf" domainObjectName="Conf"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="website_audit" domainObjectName="WebsiteAudit"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="website_audit_pic" domainObjectName="WebsiteAuditPic"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_score" domainObjectName="ProjectScore"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_contact" domainObjectName="ProjectContact"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="form_detail_user" domainObjectName="FormDetailUser"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="form_detail_user_history" domainObjectName="FormDetailUserHistory"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="form_detail_car" domainObjectName="FormDetailCar"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="form_detail_car_history" domainObjectName="FormDetailCarHistory"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="form_field" domainObjectName="FormField"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_file_inspect" domainObjectName="ProjectFileInspect"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_summary" domainObjectName="ProjectSummary"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_report" domainObjectName="ProjectReport"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+            <!--<columnOverride column="body" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+        <!--</table>-->
+        <!--<table tableName="v_project" domainObjectName="VProject"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="policy_group" domainObjectName="PolicyGroup"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_relation_blacklist" domainObjectName="ProjectRelationBlacklist"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="message" domainObjectName="Message"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="org_report_config" domainObjectName="OrgReportConfig"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="product_loan_config" domainObjectName="ProductLoanConfig"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_risk_declare" domainObjectName="ProjectRiskDeclare"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="v_project_risk_declare" domainObjectName="VProjectRiskDeclare"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_quality_result" domainObjectName="ProjectQualityResult"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="project_risk_declare_record" domainObjectName="ProjectRiskDeclareRecord"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="org_condition" domainObjectName="OrgCondition"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="org_condition_group" domainObjectName="OrgConditionGroup"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="org_condition_field" domainObjectName="OrgConditionField"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="product_condition_config" domainObjectName="ProductConditionConfig"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="login_record" domainObjectName="LoginRecord"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="report_schedule" domainObjectName="ReportSchedule"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="report_day_audit" domainObjectName="ReportDayAudit"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="v_report_achievement" domainObjectName="VReportAchievement"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="v_report_credit" domainObjectName="VReportCredit"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="v_report_entry" domainObjectName="VReportEntry"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="v_report_audit" domainObjectName="VReportAudit"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="member_event" domainObjectName="MemberEvent"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="v_report_day_audit" domainObjectName="VReportDayAudit"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="product_third_valid_config" domainObjectName="ProductThirdValidConfig"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid" domainObjectName="ThirdDataValid"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid_group" domainObjectName="ThirdDataValidGroup"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid_field" domainObjectName="ThirdDataValidField"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid_fail_record" domainObjectName="ThirdDataValidFailRecord"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="product_third_valid_config" domainObjectName="ProductThirdValidConfig"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid" domainObjectName="ThirdDataValid"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid_group" domainObjectName="ThirdDataValidGroup"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid_field" domainObjectName="ThirdDataValidField"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+        <!--<table tableName="third_data_valid_fail_record" domainObjectName="ThirdDataValidFailRecord"-->
+               <!--enableInsert="true"-->
+               <!--enableSelectByPrimaryKey="true"-->
+               <!--enableSelectByExample="true"-->
+               <!--enableUpdateByPrimaryKey="true"-->
+               <!--enableDeleteByPrimaryKey="true"-->
+               <!--enableDeleteByExample="true"-->
+               <!--enableCountByExample="true"-->
+               <!--enableUpdateByExample="true"-->
+               <!--selectByPrimaryKeyQueryId="true"-->
+               <!--selectByExampleQueryId="true">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
+        <!--</table>-->
+    </context>
+    <!--
+    maven cmd:
+    mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+     -Dmybatis.generator.overwrite=true mybatis-generator:generate
+     -->
+</generatorConfiguration>
